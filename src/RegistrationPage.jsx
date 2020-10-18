@@ -13,18 +13,10 @@ export default class RegistrationPage extends Component {
   onFinishFailed = (errorInfo) => {};
 
   render() {
-    const layout = {
-      //   labelCol: { span: 8 },
-      //   wrapperCol: { span: 16 },
-    };
-    const tailLayout = {
-      //   wrapperCol: { offset: 8, span: 16 },
-    };
     return (
       <Margins>
         <h1>Registration</h1>
         <Form
-          {...layout}
           name="basic"
           initialValues={{ remember: true }}
           onFinish={this.onFinish}
@@ -101,7 +93,7 @@ export default class RegistrationPage extends Component {
             <Input />
           </Form.Item>
 
-          <Form.Item {...tailLayout}>
+          <Form.Item>
             <Button type="primary" htmlType="submit">
               Submit
             </Button>

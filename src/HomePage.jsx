@@ -11,7 +11,7 @@ const Margins = styled.div`
 
 // let history = useHistory();
 
-export default class App extends Component {
+export default class HomePage extends Component {
   goToRegistration = () => {
     history.push("/register");
   };

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import RegistrationPage from "./RegistrationPage";
-import logo from "./logo.svg";
+import HomePage from "./HomePage";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 /*
 function App() {
@@ -27,9 +28,17 @@ function App() {
 export default App;
 
 */
-
 export default class App extends Component {
   render() {
-    return <RegistrationPage />;
+    return (
+      <Router>
+        <Route exact path="/">
+          <HomePage />
+        </Route>
+        <Route path="/register">
+          <RegistrationPage />
+        </Route>
+      </Router>
+    );
   }
 }

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import RegistrationPage from "./RegistrationPage";
 import HomePage from "./HomePage";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Route, Router, Switch } from "react-router";
+import history from "./history";
 import "./App.css";
 /*
 function App() {
@@ -31,13 +33,15 @@ export default App;
 export default class App extends Component {
   render() {
     return (
-      <Router>
-        <Route exact path="/">
-          <HomePage />
-        </Route>
-        <Route path="/register">
-          <RegistrationPage />
-        </Route>
+      <Router history={history}>
+        <Switch>
+          <Route path="/register">
+            <RegistrationPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
       </Router>
     );
   }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Button } from "antd";
-import { useHistory } from "react-router-dom";
+import history from "./history";
 import styled from "styled-components";
 
 const Margins = styled.div`
@@ -13,7 +13,7 @@ const Margins = styled.div`
 
 export default class App extends Component {
   goToRegistration = () => {
-    // history.push("/register");
+    history.push("/register");
   };
 
   render() {
